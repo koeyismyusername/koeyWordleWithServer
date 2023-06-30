@@ -155,14 +155,24 @@ async function checkResult() {
   return false;
 }
 // 게임이 끝나면 호출되는 함수
-function gameOver(beWin) {
+async function gameOver(beWin) {
   timeStopped = true;
   isOver = true;
   clearInterval(timerIntervalID);
 
+  const curtain = document.querySelector("#curtain");
+  const title = curtain.querySelector(".message > .title");
+  const content = curtain.querySelector(".message > .content");
+
   if (beWin) {
-    console.log("정답입니다!");
+    title.textContent = "참 잘했어요!";
+    content.textContent = document.querySelector("main > .timer").textContent;
   } else {
-    console.log("다음 기회엔 더 잘해봐요~");
+    title.textContent = "아쉽네요~";
+    const res = await fetch("/answer");
+    const answer = await res.json();
+    content.textContent = answer;
   }
+
+  curtain.classList.add("active");
 }

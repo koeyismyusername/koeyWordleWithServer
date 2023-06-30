@@ -11,6 +11,7 @@
   --color-lightgray: rgb(138, 138, 138);
   --color-lightyellow: rgb(230, 207, 0);
   --color-lightgreen: rgb(0, 209, 0);
+  --color-curtain: rgba(4, 0, 29, 0.8);
 }
 body {
   background-color: var(--color-back-sub);
