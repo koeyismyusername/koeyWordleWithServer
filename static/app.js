@@ -7,7 +7,6 @@ let row = 0;
 let column = 0;
 const maxRow = 6;
 const maxColumn = 5;
-const answer = "FIGHT";
 
 // 타겟 설정
 setTarget(0, 0);
@@ -31,7 +30,6 @@ const timerIntervalID = setInterval(timerHandler, 1000);
 함수 선언 부
 ===================================================================
 */
-
 // 키보드 입력 처리 함수
 function handleKeyboardInput(event) {
   if (isOver) return;
@@ -56,10 +54,10 @@ function timerHandler() {
   timer.textContent = `${minutes}:${seconds}`;
 }
 // 텍스트 입력 처리 함수
-function handleTextInput(word) {
+async function handleTextInput(word) {
   if (word === "ENTER") {
     if (isLastColumn()) {
-      const beWin = checkResult();
+      const beWin = await checkResult();
       if (beWin) {
         gameOver(true);
       } else if (isLastRow()) {
@@ -130,7 +128,10 @@ function targetIsFilled() {
   return target.classList.contains("filled");
 }
 // 게임 결과를 확인하여 단어를 맞히면 true 반환
-function checkResult() {
+async function checkResult() {
+  const res = await fetch("/answer");
+  const answer = await res.json();
+
   let count = 0;
   for (let i = 0; i < 5; i++) {
     mainEl = root.children[row].children[i];
@@ -150,6 +151,8 @@ function checkResult() {
   }
 
   if (count === 5) return true;
+
+  return false;
 }
 // 게임이 끝나면 호출되는 함수
 function gameOver(beWin) {
