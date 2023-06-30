@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Koey Wordle</title>
+    <link rel="stylesheet" href="app.css" />
+    <script defer src="./js/timer.js"></script>
+    <script src="./js/game.js"></script>
+    <script defer src="./app.js"></script>
+  </head>
+  <body>
+    <!-- 탑 메뉴 -->
+    <header>
+      <a href="/" class="title">Wordle</a>
+      <button class="menu"><span class="material-icons"> menu </span></button>
+      <div class="wrapper-pages">
+        <a href="#" class="help"><span class="material-icons"> help </span></a>
+        <a href="#" class="rank">
+          <span class="material-icons"> leaderboard </span>
+        </a>
+        <a href="#" class="settings">
+          <span class="material-icons"> settings </span>
+        </a>
+      </div>
+    </header>
+    <!-- 메인 컨텐츠 영역 -->
+    <main>
+      <div class="wrapper-words">
+        <div class="row">
+          <div class="column"></div>
+          <div class="column"></div>
+          <div class="column"></div>
+          <div class="column"></div>
+          <div class="column"></div>
+        </div>
+        <div class="row">
+          <div class="column"></div>
+          <div class="column"></div>
+          <div class="column"></div>
+          <div class="column"></div>
+          <div class="column"></div>
+        </div>
+        <div class="row">
+          <div class="column"></div>
+          <div class="column"></div>
+          <div class="column"></div>
+          <div class="column"></div>
+          <div class="column"></div>
+        </div>
+        <div class="row">
+          <div class="column"></div>
+          <div class="column"></div>
+          <div class="column"></div>
+          <div class="column"></div>
+          <div class="column"></div>
+        </div>
+        <div class="row">
+          <div class="column"></div>
+          <div class="column"></div>
+          <div class="column"></div>
+          <div class="column"></div>
+          <div class="column"></div>
+        </div>
+        <div class="row">
+          <div class="column"></div>
+          <div class="column"></div>
+          <div class="column"></div>
+          <div class="column"></div>
+          <div class="column"></div>
+        </div>
+      </div>
+      <div class="timer">00:00</div>
+    </main>
+    <!-- 자판 -->
+    <footer>
+      <div class="wrapper">
+        <div class="row">
+          <button class="column" data-key="Q">Q</button>
+          <button class="column" data-key="W">W</button>
+          <button class="column" data-key="E">E</button>
+          <button class="column" data-key="R">R</button>
+          <button class="column" data-key="T">T</button>
+          <button class="column" data-key="Y">Y</button>
+          <button class="column" data-key="U">U</button>
+          <button class="column" data-key="I">I</button>
+          <button class="column" data-key="O">O</button>
+          <button class="column" data-key="P">P</button>
+        </div>
+        <div class="row">
+          <button class="column" data-key="A">A</button>
+          <button class="column" data-key="S">S</button>
+          <button class="column" data-key="D">D</button>
+          <button class="column" data-key="F">F</button>
+          <button class="column" data-key="G">G</button>
+          <button class="column" data-key="H">H</button>
+          <button class="column" data-key="J">J</button>
+          <button class="column" data-key="K">K</button>
+          <button class="column" data-key="L">L</button>
+        </div>
+        <div class="row">
+          <button class="column enter" data-key="ENTER">ENTER</button>
+          <button class="column" data-key="Z">Z</button>
+          <button class="column" data-key="X">X</button>
+          <button class="column" data-key="C">C</button>
+          <button class="column" data-key="V">V</button>
+          <button class="column" data-key="B">B</button>
+          <button class="column" data-key="N">N</button>
+          <button class="column" data-key="M">M</button>
+          <button class="column backspace" data-key="BACKSPACE">
+            <span class="material-icons" data-key="BACKSPACE"> backspace </span>
+          </button>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

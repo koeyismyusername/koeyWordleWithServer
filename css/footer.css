@@ -1,0 +1,54 @@
+footer {
+  min-width: var(--width-minimun);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-back-main);
+  height: 147px;
+}
+footer > .wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0px 20px;
+}
+footer > .wrapper > .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer > .wrapper > .row > .column {
+  width: 25px;
+  background-color: var(--color-content-main);
+  height: 35px;
+  margin: 2px;
+  border-radius: 3px;
+  font-weight: 700;
+  color: var(--color-back-main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.5s ease-out;
+}
+footer > .wrapper > .row > .column.gray {
+  background-color: var(--color-lightgray);
+}
+footer > .wrapper > .row > .column.yellow {
+  background-color: var(--color-lightyellow);
+}
+footer > .wrapper > .row > .column.green {
+  background-color: var(--color-lightgreen);
+}
+footer > .wrapper > .row > .column.enter,
+footer > .wrapper > .row > .column.backspace {
+  font-size: 0.1em;
+  width: 40px;
+}
+footer > .wrapper > .row > .column.backspace > .material-icons {
+  scale: 0.7;
+}

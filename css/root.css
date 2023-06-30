@@ -1,0 +1,33 @@
+:root {
+  font-family: "Martian Mono", monospace;
+  --color-back-main: rgb(4, 0, 29);
+  --color-back-sub: rgb(4, 0, 29);
+  --color-content-main: rgb(240, 240, 240);
+  --width-minimun: 360px;
+  --height-minimun: 640px;
+  --color-gray: rgb(131, 131, 131);
+  --color-yellow: rgb(165, 148, 0);
+  --color-green: rgb(0, 156, 0);
+  --color-lightgray: rgb(138, 138, 138);
+  --color-lightyellow: rgb(230, 207, 0);
+  --color-lightgreen: rgb(0, 209, 0);
+}
+body {
+  background-color: var(--color-back-sub);
+  min-width: var(--width-minimun);
+  min-height: var(--height-minimun);
+}
+button {
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+  width: fit-content;
+  height: fit-content;
+}
+button:hover {
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+  color: black;
+  outline: none;
+}

@@ -1,0 +1,11 @@
+/* reset css */
+@import url("https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css");
+/* 구글 아이콘 */
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+/* 구글 폰트 */
+@import url("https://fonts.googleapis.com/css2?family=Martian+Mono:wght@400;700;800&display=swap");
+/* css */
+@import url("./css/root.css");
+@import url("./css/header.css");
+@import url("./css/footer.css");
+@import url("./css/main.css");
